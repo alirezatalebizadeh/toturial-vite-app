@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import styles from './style'
-import { Stats, Billing, Testimonials, Business, CardDeal, Cta, Clients, Navbar } from './components'
+import { Stats, Billing, Testimonials, Business, CardDeal, Cta, Clients, Navbar, Hero } from './components'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,7 +15,7 @@ function App() {
       </div>
       <div className={`bg-primary ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          Hero
+          <Hero />
         </div>
       </div>
 
