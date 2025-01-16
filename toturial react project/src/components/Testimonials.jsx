@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../style'
-import Feedback from "./FeedBackCard"
+import FeedbackCard from "./FeedBackCard"
 import { feedback } from "../constants"
 
 
@@ -20,7 +20,7 @@ export default function Testimonials() {
             </div>
 
             <div className="flex flex-wrap sm:justify-start justify-center w-full feedback-container relative z-[1]">
-                {feedback.map((card) => (<Feedback key={card.id}
+                {feedback.map((card) => (<FeedbackCard key={card.id}
                     {...card} />))}
             </div>
         </section>
