@@ -3,7 +3,7 @@ import { close, logo, menu } from "../assets"
 import { navLinks } from "../constants"
 
 function Navbar() {
-  const [toggle, setToggle] = useState(true)
+  const [toggle, setToggle] = useState(false)
 
   return (
     <div className='w-full flex py-6 justify-between
@@ -32,7 +32,7 @@ function Navbar() {
             {navLinks.map((nav, index) => (
               <li className={`font-poppines font-normal
              cursor-pointer  text-[16px] flex w-full justify-end ${index === navLinks.length - 1 ? "mr-0" : "mb-5"} text-white mr-10 `} key={nav.id}>
-                <a href={`${nav.id}`}>{nav.title}</a>
+                <a href={`${nav.id}`} onClick={() => setToggle(prev => !prev)}>{nav.title}</a>
               </li>
             ))}
           </ul>
